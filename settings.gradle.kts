@@ -1,3 +1,3 @@
 rootProject.name = "reactive-edu"
 
-include (":reactor")
+include (":reactive-streams")
