@@ -1,3 +1,11 @@
 rootProject.name = "reactive-edu"
 
-include (":reactive-streams")
+pluginManagement {
+    val kotlinJvmPluginVersion: String by settings
+    plugins {
+        kotlin("jvm") version kotlinJvmPluginVersion
+    }
+}
+
+include(":reactive-streams")
+include(":reactor")
