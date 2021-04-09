@@ -33,4 +33,15 @@ class FluxTest {
                 .subscribe(System.out::println);
     }
 
+
+    @Test
+    void name3() {
+        Flux<Integer> a = Flux.just(1, 2, 3);
+        Flux<Integer> b = Flux.just(1, 2, 3);
+
+        a.publish().refCount(2);
+
+        a.zipWith(b, (x, y) -> x * y)
+                .subscribe(System.out::println);
+    }
 }
